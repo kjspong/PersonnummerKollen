@@ -8,7 +8,7 @@ namespace PersonnummerKollen
 {
     internal class Toolbox
     {
-        //Slå samman födelsedag och de tre första av de fyra sista
+        // Slå samman födelsedag och de tre första av de fyra sista
         public static int Concat(int fodelseDag, int treAvFyra)
         {
             string s1 = fodelseDag.ToString();

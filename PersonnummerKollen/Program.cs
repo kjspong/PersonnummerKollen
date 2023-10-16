@@ -14,10 +14,10 @@ namespace PersonnummerKollen
             Console.Write($"Du har angivit följande information: {fodelseDag}-{treAvFyra}");
             Console.WriteLine();
 
-            //Slå samman födelsedag och de tre första av de fyra sista
+            // Slå samman födelsedag och de tre första av de fyra sista
             int fodelseDagOchTreAvFyra = Toolbox.Concat(fodelseDag, treAvFyra);
 
-            //Splitta det sammanslagna numret till en array
+            // Splitta det sammanslagna numret till en array
             var personNummer = fodelseDagOchTreAvFyra.ToString().Select(x => (int)char.GetNumericValue(x)).ToArray();
 
             // Värden från Luhnalgoritmen
