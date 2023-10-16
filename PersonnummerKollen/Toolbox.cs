@@ -9,12 +9,12 @@ namespace PersonnummerKollen
     internal class Toolbox
     {
         // Slå samman födelsedag och de tre första av de fyra sista
-        public static int Concat(int fodelseDag, int treAvFyra)
+        public static string Concat(string fodelseDag, string treAvFyra)
         {
-            string s1 = fodelseDag.ToString();
-            string s2 = treAvFyra.ToString();
+            string s1 = fodelseDag;
+            string s2 = treAvFyra;
             string s = s1 + s2;
-            int fodelseDagOchTreAvFyra = int.Parse(s);
+            string fodelseDagOchTreAvFyra = s;
             return fodelseDagOchTreAvFyra;
         }
 

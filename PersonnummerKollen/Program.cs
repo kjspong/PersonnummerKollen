@@ -5,20 +5,20 @@ namespace PersonnummerKollen
         static void Main(string[] args)
         {
             Console.Write("Välkommen till PersonnummerKollen!\n\nKnappa in någons födelsedag (ÅÅMMDD): ");
-            int fodelseDag = int.Parse(Console.ReadLine());
+            string fodelseDag = (Console.ReadLine());
 
             Console.Write("Ange de tre första av de fyra sista: ");
-            int treAvFyra = int.Parse(Console.ReadLine());
+            string treAvFyra = (Console.ReadLine());
 
             Console.WriteLine();
             Console.Write($"Du har angivit följande information: {fodelseDag}-{treAvFyra}");
             Console.WriteLine();
 
             // Slå samman födelsedag och de tre första av de fyra sista
-            int fodelseDagOchTreAvFyra = Toolbox.Concat(fodelseDag, treAvFyra);
+            string fodelseDagOchTreAvFyra = Toolbox.Concat(fodelseDag, treAvFyra);
 
             // Splitta det sammanslagna numret till en array
-            var personNummer = fodelseDagOchTreAvFyra.ToString().Select(x => (int)char.GetNumericValue(x)).ToArray();
+            var personNummer = fodelseDagOchTreAvFyra.Select(x => (int)char.GetNumericValue(x)).ToArray();
 
             // Värden från Luhnalgoritmen
             int[] luhn = { 2, 1, 2, 1, 2, 1, 2, 1, 2 };
